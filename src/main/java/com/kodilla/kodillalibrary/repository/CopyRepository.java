@@ -29,5 +29,5 @@ public interface CopyRepository extends CrudRepository<Copy, Long> {
     long count();
 
     @Query
-    int retrievedCopyQuantityByTitle(@Param("book") Book book);
+    int retrievedCopyQuantityByTitle(@Param("bookTitle") String title);
 }

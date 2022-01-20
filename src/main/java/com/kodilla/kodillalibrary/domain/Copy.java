@@ -12,7 +12,7 @@ import javax.persistence.*;
 
 @NamedQuery(
         name = "Copy.retrievedCopyQuantityByTitle",
-        query = "SELECT COUNT(book) FROM COPIES WHERE book = :book"
+        query = "SELECT COUNT(book) FROM COPIES WHERE book.title = :bookTitle"
 )
 @Getter
 @Setter

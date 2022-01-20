@@ -31,7 +31,7 @@ public class Book {
     private Long id;
 
     @NotNull
-    @Column(name="TITLE")
+    @Column(name="TITLE", unique = true)
     private String title;
 
     @NotNull

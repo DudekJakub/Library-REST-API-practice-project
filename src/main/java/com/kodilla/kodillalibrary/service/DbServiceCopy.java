@@ -34,13 +34,7 @@ public class DbServiceCopy {
     }
 
     public int getAllAvailableCopiesByTitle(final String title) {
-        List<Book> titleBook = dbServiceBook.getAllBooks().stream().filter(e -> e.getTitle().equals(title)).collect(Collectors.toList());
-        if(titleBook.isEmpty()) {
-            return 0;
-        }
-        Book book = titleBook.get(0);
-
-        return copyRepository.retrievedCopyQuantityByTitle(book);
+        return copyRepository.retrievedCopyQuantityByTitle(title);
     }
 
     public Copy saveCopy(final Copy copy) {
