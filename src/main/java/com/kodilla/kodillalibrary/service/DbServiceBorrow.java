@@ -55,7 +55,6 @@ public class DbServiceBorrow {
             copy.setInCirculation(false);
             copy.setInLibrary(true);
         }
-
         return borrowRepository.save(borrow);
     }
 
